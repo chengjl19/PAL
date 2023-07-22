@@ -45,15 +45,13 @@ In PESC dataset, we additionally add two fields: `persona` and `persona_list`.
 
 Our code (in `codes`) mainly references https://github.com/thu-coai/Emotional-Support-Conversation/tree/main/codes_zcj
 
-### Training
-
-1.data process
+### Data preprocess
 
 ```python
 python codes/_reformat/process.py --add_persona True
 ```
 
-2.model training
+### Model training
 
 You should first download the [BlenderBot-small](https://huggingface.co/facebook/blenderbot_small-90M) model and put the `pytorch_model.bin` file in `Blenderbot_small-90M`.
 
@@ -61,10 +59,10 @@ Then run `RUN/prepare_strat.sh`
 
 And run `RUN/train_strat.sh`
 
-3.model inference
+### Model inference
 
 run `RUN/infer_strat.sh`
 
-4.model interact
+### Model interact
 
 run `RUN/interact_strat.sh`
