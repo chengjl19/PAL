@@ -1,0 +1,21 @@
+CUDA_VISIBLE_DEVICES=4 python infer.py \
+    --config_name strat \
+    --inputter_name strat \
+    --add_nlg_eval \
+    --seed 0 \
+    --load_checkpoint /home/chengjiale/emotion/ESC/Emotional-Support-Conversation/codes_cjl/DATA/strat.strat_persona_attention_final_rebuttal/2023-03-23000057.1.5e-05.4.1gpu/epoch-4.bin \
+    --fp16 false \
+    --max_input_length 512 \
+    --max_decoder_input_length 15 \
+    --max_length 50 \
+    --min_length 10 \
+    --infer_batch_size 128 \
+    --infer_input_file ./prepare_data_final/test.txt \
+    --temperature 0.5 \
+    --top_k 10 \
+    --top_p 0.9 \
+    --num_beams 1 \
+    --repetition_penalty 1.03 \
+    --no_repeat_ngram_size 0 \
+    --use_all_persona False \
+    --encode_context True

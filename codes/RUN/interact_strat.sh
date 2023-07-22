@@ -1,0 +1,17 @@
+CUDA_VISIBLE_DEVICES=5 python interact.py \
+    --config_name strat \
+    --inputter_name strat_interact \
+    --seed 0 \
+    --load_checkpoint /home/chengjiale/emotion/ESC/Emotional-Support-Conversation/codes_cjl/DATA/strat.strat_persona_attention_final/2022-08-20225008.1.5e-05.4.1gpu/epoch-4.bin \
+    --fp16 false \
+    --max_length 50 \
+    --min_length 10 \
+    --temperature 0.7 \
+    --top_k 30 \
+    --top_p 0.9 \
+    --num_beams 1 \
+    --repetition_penalty 1.03 \
+    --no_repeat_ngram_size 3 \
+    --prepare_persona_ahead False \
+    --persona_model_dir_or_name facebook/bart-large-cnn \
+    --persona_ckpt /home/chengjiale/emotion/Persona_extractor/pl_root/lightning_logs/version_28/checkpoints/epoch=7-step=8384.ckpt
