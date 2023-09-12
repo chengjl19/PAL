@@ -27,6 +27,8 @@ If you use our codes or your research is related to our paper, please kindly cit
 Our persona extractor is trained using the dataset, PersonaChat, see our paper for details on how to do this. <br> 
 The training code is located in the `persona_extractor` path, where `process_bart_df` is the training data preprocessing code and `train_bart` is the training code.
 
+Our data is from parlai (https://github.com/facebookresearch/ParlAI/tree/main/projects/personachat) and you can download it from here (https://drive.google.com/drive/folders/1-lnO2xi9YLr82VdcF5oVlQClHsRnn9EP?usp=sharing).
+
 To run this code, just put the PersonaChat dataset under this path and
 ```python
 python process_bart_df.py
